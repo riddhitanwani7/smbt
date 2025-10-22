@@ -1,0 +1,147 @@
+/* --- Global Styles for Credexa (React Version) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #4F46E5;
+  --secondary-color: #3B82F6;
+  --success-color: #16A34A;
+  --success-hover: #15803D;
+  --background-light: #F9FAFB;
+  --text-dark: #000000;
+  --text-light: #032362;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --border-radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.landing-container {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  text-align: center;
+  position: relative;
+}
+
+.landing-btn {
+  background-color: var(--success-color);
+  color: var(--text-dark);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.landing-btn:hover {
+  background-color: var(--success-hover);
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F3F4F6;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle circular backgrounds */
+.auth-container::before,
+.auth-container::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(79, 70, 229, 0.1);
+}
+
+.auth-container::before {
+  width: 200px;
+  height: 200px;
+  top: 5%;
+  right: 10%;
+}
+
+.auth-container::after {
+  width: 300px;
+  height: 300px;
+  bottom: 10%;
+  left: 5%;
+}
+
+.auth-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  width: 100%;
+  max-width: 420px;
+  z-index: 2;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: var(--border-radius);
+  font-size: 0.95rem;
+}
+
+.auth-btn {
+  width: 100%;
+  background-color: var(--success-color);
+  color: var(--text-dark);
+  border: none;
+  padding: 0.85rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: var(--success-hover);
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.auth-footer a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .auth-card {
+    padding: 2rem;
+    margin: 1rem;
+  }
+}
